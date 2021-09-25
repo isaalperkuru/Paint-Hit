@@ -11,7 +11,7 @@ public class ColorScript : MonoBehaviour
 
     public static Color[] colorArray;
 
-    void Start()
+    void OnEnable()
     {
         ChangeColor();
     }

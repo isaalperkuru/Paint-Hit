@@ -44,12 +44,12 @@ public class LevelHandler : MonoBehaviour
             ballCount = 3;
             totalCircles = 5;
         }
-        if (currentLevel <= 8 && currentLevel >= 13)
+        if (currentLevel >= 8 && currentLevel <= 13)
         {
             ballCount = 4;
             totalCircles = 6;
         }
-        if (currentLevel <= 14 && currentLevel >= 20)
+        if (currentLevel >= 14 && currentLevel <= 20)
         {
             ballCount = 4;
             totalCircles = 6;
