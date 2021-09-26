@@ -102,7 +102,6 @@ public class LevelHandler : MonoBehaviour
         int[] array = new int[]
         {
             UnityEngine.Random.Range(1,3),
-            UnityEngine.Random.Range(4,6),
             UnityEngine.Random.Range(18,20)
         };
 
@@ -121,8 +120,6 @@ public class LevelHandler : MonoBehaviour
         int[] array = new int[]
         {
             UnityEngine.Random.Range(1,3),
-            UnityEngine.Random.Range(4,6),
-            UnityEngine.Random.Range(15,17),
             UnityEngine.Random.Range(22,24)
         };
 
@@ -141,9 +138,8 @@ public class LevelHandler : MonoBehaviour
         int[] array = new int[]
         {
             UnityEngine.Random.Range(1,3),
-            UnityEngine.Random.Range(4,6),
-            UnityEngine.Random.Range(11,13),
             UnityEngine.Random.Range(8,10),
+            UnityEngine.Random.Range(12,14),
             UnityEngine.Random.Range(15,17)
         };
 
@@ -161,10 +157,7 @@ public class LevelHandler : MonoBehaviour
         int[] array = new int[]
         {
             UnityEngine.Random.Range(1,3),
-            UnityEngine.Random.Range(4,6),
             UnityEngine.Random.Range(11,13),
-            UnityEngine.Random.Range(8,10),
-            UnityEngine.Random.Range(15,17),
             UnityEngine.Random.Range(7,9)
         };
 
@@ -175,5 +168,76 @@ public class LevelHandler : MonoBehaviour
             gameObject1.transform.GetChild(array[i]).gameObject.tag = "red";
         }
     }
+    public void MakeHurdles7()
+    {
+        GameObject gameObject1 = GameObject.Find("Circle" + BallHandler.currentCircleNo);
 
+        int[] array = new int[]
+        {
+            UnityEngine.Random.Range(2,4),
+            UnityEngine.Random.Range(12,14)
+        };
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            gameObject1.transform.GetChild(array[i]).gameObject.GetComponent<MeshRenderer>().enabled = true;
+            gameObject1.transform.GetChild(array[i]).gameObject.GetComponent<MeshRenderer>().material.color = currentColor;
+            gameObject1.transform.GetChild(array[i]).gameObject.tag = "red";
+        }
+    }
+    public void MakeHurdles8()
+    {
+        GameObject gameObject1 = GameObject.Find("Circle" + BallHandler.currentCircleNo);
+
+        int[] array = new int[]
+        {
+            UnityEngine.Random.Range(3,5),
+            UnityEngine.Random.Range(7,9),
+            UnityEngine.Random.Range(16,18)
+        };
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            gameObject1.transform.GetChild(array[i]).gameObject.GetComponent<MeshRenderer>().enabled = true;
+            gameObject1.transform.GetChild(array[i]).gameObject.GetComponent<MeshRenderer>().material.color = currentColor;
+            gameObject1.transform.GetChild(array[i]).gameObject.tag = "red";
+        }
+    }
+    public void MakeHurdles9()
+    {
+        GameObject gameObject1 = GameObject.Find("Circle" + BallHandler.currentCircleNo);
+
+        int[] array = new int[]
+        {
+            UnityEngine.Random.Range(1,3),
+            UnityEngine.Random.Range(13,15),
+            UnityEngine.Random.Range(16,18)
+        };
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            gameObject1.transform.GetChild(array[i]).gameObject.GetComponent<MeshRenderer>().enabled = true;
+            gameObject1.transform.GetChild(array[i]).gameObject.GetComponent<MeshRenderer>().material.color = currentColor;
+            gameObject1.transform.GetChild(array[i]).gameObject.tag = "red";
+        }
+    }
+    public void MakeHurdles10()
+    {
+        GameObject gameObject1 = GameObject.Find("Circle" + BallHandler.currentCircleNo);
+
+        int[] array = new int[]
+        {
+            UnityEngine.Random.Range(1,3),
+            UnityEngine.Random.Range(4,6),
+            UnityEngine.Random.Range(10,12),
+            UnityEngine.Random.Range(16,18)
+        };
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            gameObject1.transform.GetChild(array[i]).gameObject.GetComponent<MeshRenderer>().enabled = true;
+            gameObject1.transform.GetChild(array[i]).gameObject.GetComponent<MeshRenderer>().material.color = currentColor;
+            gameObject1.transform.GetChild(array[i]).gameObject.tag = "red";
+        }
+    }
 }

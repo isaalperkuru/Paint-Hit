@@ -63,6 +63,7 @@ public class BallHandler : MonoBehaviour
         gameObject2.transform.position = new Vector3(0, 20, 23);
         gameObject2.name = "Circle" + circleNo;
 
+
         ballCount = LevelHandler.ballCount;
 
         currentCircleNo = circleNo;
@@ -77,6 +78,7 @@ public class BallHandler : MonoBehaviour
         }
 
         MakeHurdles();
+
     }
     public void FailGame()
     {
@@ -208,18 +210,26 @@ public class BallHandler : MonoBehaviour
     }
     void MakeHurdles()
     {
-        if (circleNo == 1)
+        if (circleNo % 10 == 0)
             FindObjectOfType<LevelHandler>().MakeHurdles();
-        if (circleNo == 2)
+        if (circleNo % 10 == 1)
             FindObjectOfType<LevelHandler>().MakeHurdles2();
-        if (circleNo == 3)
+        if (circleNo % 10 == 2)
             FindObjectOfType<LevelHandler>().MakeHurdles3();
-        if (circleNo == 4)
+        if (circleNo % 10 == 3)
             FindObjectOfType<LevelHandler>().MakeHurdles4();
-        if (circleNo == 5)
+        if (circleNo % 10 == 4)
             FindObjectOfType<LevelHandler>().MakeHurdles5();
-        if (circleNo == 6)
+        if (circleNo % 10 == 5)
             FindObjectOfType<LevelHandler>().MakeHurdles6();
+        if (circleNo % 10 == 6)
+            FindObjectOfType<LevelHandler>().MakeHurdles7();
+        if (circleNo % 10 == 7)
+            FindObjectOfType<LevelHandler>().MakeHurdles8();
+        if (circleNo % 10 == 8)
+            FindObjectOfType<LevelHandler>().MakeHurdles9();
+        if (circleNo % 10 == 9)
+            FindObjectOfType<LevelHandler>().MakeHurdles10();
     }
 
     IEnumerator LevelCompleteScreen()
